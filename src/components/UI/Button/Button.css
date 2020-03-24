@@ -1,4 +1,4 @@
-button {
+.Button {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 4px;
@@ -10,24 +10,29 @@ button {
     font-size: 12px;
 }
 
-button:focus {
+.Button:focus {
     outline: none;
 }
-button:active {
-    box-shadow: inset 2px 2px 1px rgba(0,0,0, .3);
+
+.Button:active {
+    box-shadow: inset 2px 2px 1px rgba(0, 0, 0, .3);
 }
-button:disabled {
+
+.Button:disabled {
     background: #ccc;
-    color: black;
+    color: #000;
     cursor: not-allowed;
 }
-button.success {
-    background: rgba(161,240,169,1);
+
+.error {
+    background: rgba(240, 87, 108, 1);
 }
-button.error {
-    background: rgba(240,87,108,1);
+
+.success {
+    background: rgba(161, 240, 69, 1);
 }
-button.primary {
+
+.primary {
     background: #2884f6;
     color: #fff;
 }

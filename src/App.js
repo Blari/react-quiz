@@ -1,22 +1,24 @@
-import React from 'react';
-import {Route, Switch} from "react-router-dom";
-import Layout from "./hoc/layuot/layout";
-import Quiz from "./containers/Quize/Quiz";
-import QuizList from "./components/QuizList/QuizList";
-import Auth from "./components/Auth/Auth";
-import QuizCreator from "./components/QuizCreator/QuizCreator";
+import React, {Component} from 'react'
+import Layout from './hoc/Layout/Layout'
+import {Route, Switch} from 'react-router-dom'
+import Quiz from './containers/Quiz/Quiz'
+import QuizList from './containers/QuizList/QuizList'
+import Auth from './containers/Auth/Auth'
+import QuizCreator from './containers/QuizCreator/QuizCreator'
 
-function App() {
-  return (
-    <Layout>
+class App extends Component {
+  render() {
+    return (
+      <Layout>
         <Switch>
-            <Route patch={"/auth"} component={Auth} />
-            <Route patch={"/quiz-creator"} component={QuizCreator} />
-            <Route patch={"/quiz/:id"} component={Quiz} />
-            <Route patch={"/"} component={QuizList} />
+          <Route path="/auth" component={Auth} />
+          <Route path="/quiz-creator" component={QuizCreator} />
+          <Route path="/quiz/:id" component={Quiz} />
+          <Route path="/" component={QuizList} />
         </Switch>
-    </Layout>
-  );
+      </Layout>
+    )
+  }
 }
 
-export default App;
+export default App

@@ -1,21 +1,25 @@
-import React from "react"
-import "./MenuToggle.css"
+import React from 'react'
+import './MenuToggle.css'
 
 const MenuToggle = props => {
-    const cls = [
-        "menuToggle",
-        'fa'
-    ]
+  const cls = [
+    'MenuToggle',
+    'fa'
+  ]
 
-    props.isOpen ? cls.push('fa-times open') : cls.push("fa-bars")
+  if (props.isOpen) {
+    cls.push('fa-times')
+    cls.push('open')
+  } else {
+    cls.push('fa-bars')
+  }
 
-
-    return(
-        <i
-        className={cls.join(' ')}
-        onClick={props.onToggle}
-        />
-    )
+  return (
+    <i
+      className={cls.join(' ')}
+      onClick={props.onToggle}
+    />
+  )
 }
 
 export default MenuToggle
