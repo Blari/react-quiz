@@ -1,10 +1,10 @@
 import React, {Component} from 'react'
-import Layout from './hoc/Layout/Layout'
+import Layout from "./hoc/layuot/layout";
 import {Route, Switch} from 'react-router-dom'
 import Quiz from './containers/Quiz/Quiz'
-import QuizList from './containers/QuizList/QuizList'
+import QuizList from "./components/QuizList/QuizList";
 import Auth from './containers/Auth/Auth'
-import QuizCreator from './containers/QuizCreator/QuizCreator'
+import QuizCreator from "./components/QuizCreator/QuizCreator";
 
 class App extends Component {
   render() {
